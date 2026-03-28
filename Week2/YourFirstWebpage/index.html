@@ -1,0 +1,57 @@
+<!DOCTYPE html> <!--SET DOC TYPE-->
+
+<html>
+
+<head>
+    <title>My Skeleton Page</title> <!--SET BROWSER TITLE-->
+</head>
+
+<h1 style="font-family:sans-serif; text-align: center;">Welcome to Skelly's Library <img src="Assets\Tyson.1.png">
+</h1>
+
+<body>
+    <!--BACKGROUND  IMAGE-->
+    <div style="text-align: center; background-attachment: scroll;"><img src="Assets\Skelly_0.jfif"
+            alt="Skelly's Library"></div>
+
+
+    <!--LIBRARY BUTTON/LINK-->
+    <div class="library-selection" style="text-align: center;">
+        <!--The Anchor-->
+        <a id="library-link" href="https://openlibrary.org/" target="_blank" ;>
+            <!--Element with an ID-->
+            <button id="library-text-box">
+                Check out Library
+            </button>
+        </a>
+    </div>
+
+
+    <!--POETRY BUTTON/LINK-->
+    <div class="poetry-section" style="text-align: center; font-family: sans-serif;">
+        <!--The Anchor-->
+        <a id="poetry-link" href="https://poets.org" target="_blank">
+            <!--Element with ID-->
+            <button id="poetry-btn" type="button">
+                Read Poetry
+            </button>
+        </a>
+
+
+        <p>
+            <q><strong>Without fear, we are able to see more clearly our connections to others. Without fear, we have
+                    more room for understanding and compassion. Without fear, we are truly free.</strong></q>
+            <br><strong>-Thich Nhat Hanh</strong>
+        </p>
+    </div>
+
+
+
+    <!--AUDIO SOURCE FOR WEBPAGE-->
+    <audio autoplay loop style="display:none;">
+        <source src="./Assets\Vivaldi_Spring.mp4" controls oncanplay="this.volume=0.3" type="audio/mp4">
+    </audio>
+
+</body>
+
+</html>
