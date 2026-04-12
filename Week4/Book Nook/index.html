@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Nook</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Special+Elite&display=swap');
+    </style>
+    <style>
+        :root {
+            --Main-background: #261d19;
+            --Sub-Background: #3e3c3b;
+            --Main-Text: #e1e1e1;
+            --Nav-Bar: #26211e;
+            --Nav-Btn: #d4a373;
+            --Classics: #461d98;
+            --Classics-text: #b2b5d2;
+            --Fiction: #3e4444;
+            --Fiction-text: #f1f1f1;
+            --NonFic: #6b705c;
+            --NonFic-text: #f1f1f1;
+            --Sci-Fi: #bc6c25;
+            --Sci-Fi-text: #1a1614;
+            --Fantasy: #4a3a2a;
+            --Fantasy-text: #e9edc9;
+            --Gothic-Horror: #7c1a1a;
+            --Gothic-Horror-text: #b8adad;
+            background-color: var(--Main-background);
+            color: var(--Main-Text);
+
+            /*FONT REFERENCES:display: 
+              font-family: "EB Garamond", serif;
+              
+               font-family: "Special Elite", system-ui;
+              */
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+
+
+        ul {
+            display: flex;
+            padding: 0;
+            gap: 20px;
+            justify-content: space-evenly;
+        }
+
+        nav>ul>li {
+            list-style-type: none;
+
+        }
+
+        .nav a {
+            color: var(--Main-Text);
+            font-family: "Special Elite", system-ui;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            background-color: var(--Sub-Background);
+            justify-content: space-evenly;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-left: 30px;
+            margin-right: 30px;
+            padding: 20px;
+        }
+
+        header {
+            font-family: "Special Elite", system-ui;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: "Special Elite", system-ui;
+            text-align: center;
+        }
+
+        p {
+            font-family: "EB Garamond", serif;
+        }
+
+        body {
+            padding-top: 150px;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .cards1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 20px;
+        }
+
+
+        .cards2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin-bottom: 30px;
+            padding: 20px;
+        }
+
+
+
+        .Fiction {
+            background-color: var(--Fiction);
+            color: var(--Fiction-text);
+            border: 5px solid #26211e;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin-bottom: 30px;
+            padding: 10px;
+
+        }
+
+        .Non-Fiction {
+            background-color: var(--NonFic);
+            color: var(--NonFic-text);
+            border: 5px solid #26211e;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin-bottom: 30px;
+            padding: 10px;
+        }
+
+        .Sci-Fi {
+            background-color: var(--Sci-Fi);
+            color: var(--Sci-Fi-text);
+            border: 5px solid #26211e;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin-bottom: 30px;
+            padding: 10px;
+        }
+
+        .Fantasy {
+            background-color: var(--Fantasy);
+            color: var(--Fantasy-text);
+            border: 5px solid #26211e;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin-bottom: 30px;
+            padding: 10px;
+        }
+
+        .Gothic-Horror {
+            background-color: var(--Gothic-Horror);
+            color: var(--Gothic-Horror-text);
+            border: 5px solid #26211e;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin-bottom: 30px;
+            padding: 10px;
+        }
+
+        .Classics {
+            background-color: var(--Classics);
+            color: var(--Classics-text);
+            border: 5px solid #26211e;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin-bottom: 30px;
+            padding: 10px;
+        }
+
+        /*HOVER EFFECTS*/
+
+
+
+        @media screen and (max-width: 720px) {
+            html {
+                font-size: 12px;
+            }
+
+
+            .card-container {
+                grid-template-columns: 1fr;
+
+            }
+        }
+
+        .top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            text-align: center;
+            background-color: var(--Main-background);
+        }
+
+        .Grid-separator {
+            grid-column: 1/-1;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        section[id] {
+            scroll-margin-top: 100px;
+        }
+
+        .Fiction:hover {
+            border-color: rgb(207, 19, 19);
+        }
+
+        .Non-Fiction:hover {
+            border-color: rgb(173, 173, 173);
+        }
+
+        .Sci-Fi:hover {
+            border-color: rgb(196, 168, 59);
+        }
+
+        .Fantasy:hover {
+            border-color: rgb(148, 113, 49);
+        }
+
+        .Gothic-Horror:hover {
+            border-color: rgb(82, 75, 75);
+        }
+
+        .Classics:hover {
+            border-color: rgb(83, 53, 174);
+        }
+    </style>
+
+</head>
+
+
+
+<div class="top">
+    <header><img src="Assets\Book.svg"> My Book Nook <img src="Assets\Book.svg"> </header>
+
+    <body>
+        <nav class="nav">
+            <ul>
+                <li><a href="#Fiction">Fiction</a></li>
+                <li><a href="#Non-Fiction">Non-Fiction</a></li>
+                <li><a href="#Sci-Fi">Sci-Fi</a></li>
+                <li><a href="#Fantasy">Fantasy</a></li>
+                <li><a href="#Gothic-Horror">Gothic-Horror</a></li>
+                <li><a href="#Classics">Classics</a></li>
+            </ul>
+        </nav>
+</div>
+
+<h2>A small, cozy spot dedicated to my favorite books and genres.</h2>
+
+
+
+
+<div class="card-container">
+
+    <!--SEPARATOR-->
+    <img src="Assets\Separator1.png" class="Grid-separator">
+
+    <!--CARD 1-->
+    <div class="cards1">
+        <section id="Fiction">
+
+
+            <div class="Fiction">
+                <h2>FICTION</h2>Wuthering Heights by Emily Brontë
+                <p>A haunting Gothic masterpiece of obsession and revenge set against the windswept Yorkshire moors.
+                    It follows the destructive love between Heathcliff and Catherine Earnshaw, a bond so intense it
+                    transcends death and haunts the lives of two generations.</p>
+            </div>
+        </section>
+
+
+        <!--CARD 2-->
+        <section id="Non-Fiction">
+
+            <div class="Non-Fiction">
+                <h2>NON-FICTION</h2>True Love by Thich Nhat Hanh
+                <p>Thich Nhat Hanh defines true love through the four elements of loving-kindness, compassion, joy,
+                    and inclusiveness. The book offers practical mindfulness meditations to help practitioners be
+                    truly present for themselves and their partners.</p>
+            </div>
+        </section>
+
+        <!--CARD 3-->
+        <section id="Sci-Fi">
+
+            <div class="Sci-Fi">
+                <h2>SCI-FI</h2>Dune by Frank Herbet
+                <p>An epic of world-building where politics, religion, and ecology intersect on a desert planet. The
+                    story follows Paul Atreides as he navigates a deadly power struggle for the "spice," rising as a
+                    messianic leader among the desert-dwelling Fremen to reclaim his family’s legacy. </p>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="cards2">
+        <!--CARD 4-->
+
+        <section id="Fantasy">
+            <div class="Fantasy">
+                <h2>FANTASY</h2> The Tolkien Series by J.R.R. Tolkein
+                <p>The ultimate journey of courage and fellowship. It follows a band of heroes, led by the humble
+                    hobbit Frodo Baggins, on a perilous quest across Middle-earth to destroy the One Ring and defeat
+                    the dark lord Sauron.</p>
+            </div>
+        </section>
+
+        <!--CARD 5-->
+        <section id="Gothic-Horror">
+            <div class="Gothic-Horror">
+                <h2>GOTHIC HORROR</h2>The Complete Tales and Poems of Edgar Allan Poe
+                <p>Edgar Allan Poe’s collection of tales and poems blending Gothic horror, mystery, and melancholy.
+                    His work often explores the dark side of the human psyche, featuring themes of premature burial,
+                    madness, and the loss of a beautiful woman.</p>
+            </div>
+        </section>
+
+        <!--CARD 6-->
+        <section id="Classics">
+            <div class="Classics">
+                <h2>CLASSICS</h2>The Odyssey by Homer
+                <p>The Odyssey follows the Greek hero Odysseus on a grueling ten-year journey home to Ithaca after
+                    the Trojan War. While he battles monsters, gods, and temptations at sea, his wife Penelope fends
+                    off aggressive suitors at home.</p>
+            </div>
+        </section>
+
+
+    </div>
+
+
+    <!--SEPARATOR-->
+    <img src="Assets\Separator1.png" class="Grid-separator">
+</div>
+
+</body>
+
+</html>
