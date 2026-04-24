@@ -1,0 +1,150 @@
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    font-size: 3rem;
+    text-align: center;
+}
+
+/* photo change on dark/light mode */
+.night-photo {
+    display: none;
+}
+
+body.dark-mode .day-photo{
+    display:none;
+}
+
+body.dark-mode .night-photo{
+    display: block;
+}
+
+/* fix up images*/
+.image-container{
+    display: flex;
+    justify-content: center; 
+    margin: 20px 0;
+}
+
+.image-container img{
+    width: 100%; 
+    max-width: 600px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+nav {
+    background-color: rgb(142, 223, 61);
+    color: rgb(100, 74, 20);
+    position: fixed; 
+    top: 0px;
+    left: -200px; 
+    width: 200px; 
+    height: 100vh;
+    transition: left 0.5s ease-in; 
+}
+
+nav a{
+
+    font-size: 1.2rem;
+    font-family: "Permanent Marker", cursive;
+    display: block;
+    padding: 15px;
+}
+
+nav a:hover{
+    background-color: white;
+}
+
+nav > ul > li {
+    list-style-type: none;
+    padding: 0;
+}
+
+.panel{
+    display: none; /* hides accordion */
+    padding: 10px;
+    background-color: rgb(142, 223, 61); 
+    border: 2px solid rgb(77, 55, 12); 
+    padding: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 10px;
+}
+
+#closeNav{
+    margin: 30px;
+}
+
+.panel li img{
+width: 100px;
+height: 100px;
+object-fit: cover;
+border-radius: 5px;
+border: 1px solid rgb(77, 55, 12);
+}
+
+.panel li{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+/* Default light mode */
+body{
+    background-color: rgb(221, 221, 210); 
+    color: black;
+    font-family: "Purple Purse", serif;}
+
+
+/* centers content block */
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.eventOutput{
+    margin-bottom: 20px;
+}
+
+/* Dark Mode colors */
+body.dark-mode{
+    background-color: #484848;
+    color: rgb(0, 0, 0); 
+}
+
+body.dark-mode .panel{
+    background-color: purple;
+    color: white;
+    border-color: white;
+}
+
+
+body.dark-mode #darkmode{
+    background-color: purple;
+    color: white;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    padding: 20px;
+}

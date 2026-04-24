@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Permanent+Marker&family=Purple+Purse&display=swap');
+    </style>
+    <link rel="stylesheet" href="event.css">
+</head>
+
+
+
+
+
+<body>
+    <button id="drawer">Nav</button>
+    <nav id="nav">
+        <ul>
+            <li><a href="#food">Food</a></li>
+            <li><a href="#sightseeing">Must-see Locations</a></li>
+            <li><a href="#coolplaces">Cool Spots</a></li>
+
+
+        </ul>
+        <button id="closeNav">Close</button>
+    </nav>
+
+
+
+
+
+    <header>Destination: Texas</header>
+    <div class="image-container">
+        <img src="Assets/Dallas_Day.webp" class="day-photo" atl="Texas Day">
+
+        <img src="Assets/Austin_Evening.jpg" class="night-photo" atl="Texas Night">
+    </div>
+
+
+
+
+    <div class="content">
+        <div class="eventOutput">
+
+            <button id="darkmode">Switch Mode</button>
+
+
+
+            <section id="food">
+                <button class="accordion">Best BBQ Spots</button>
+
+                <ul class="panel">
+                    <li><img src="Assets\Terry_Blacks_BBQ(1).jpg">Terry Black's BBQ</li>
+                    <li><img src="Assets\Franklin_BBQ.jpg">Franklin BBQ</li>
+                    <li><img src="Assets\The_Salt_Lick (1).jpg">The Salt Lick</li>
+        </div>
+        </section>
+
+
+
+        <section id="sightseeing">
+            <button class="accordion">Must-see Places</button>
+
+            <ul class="panel">
+                <li><img src="Assets\The_Alamo(1).jpg">The Alamo</li>
+                <li><img src="Assets\Space_Center_Huoston(1).jpg">Space Center Huoston</li>
+                <li><img src="Assets\The_Big_Bend(1).jpg">The Big Bend</li>
+
+        </section>
+
+
+
+        <section id="coolplaces">
+            <button class="accordion">Cool & Quirky Places</button>
+
+            <ul class="panel">
+                <li><img src="Assets/Cadillac_Ranch.jpg">Cadillac Ranch</li>
+                <li><img src="Assets/Inner_Space_Caverns.jpg">Inner Space Caverns</li>
+                <li><img src="Assets/Stonehedge_Replica.jpg">Stonehedge Replica</li>
+                </section>
+    </div>
+    
+    </div>
+    </div>
+
+    <footer>
+        <p>Current Planning Time</p>
+        <button onmouseover="showDate()" onmouseout="hideDate()">Check Time</button>
+        <script>
+            function showDate() {
+                document.getElementById("demo").innerHTML = Date();
+            }
+            function hideDate() {
+                document.getElementById("demo").innerHTML = "";
+            }
+
+        </script>
+        
+    <p id="demo"></p>
+    </footer>
+
+
+
+
+
+
+
+
+
+    <script src="event.js"></script>
+    </div>
+</body>
+
+</html>
